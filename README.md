@@ -11,6 +11,7 @@
 
 * Start the web-server with `npm start`
 * Navigate to [http://localhost:3000](http://localhost:3000) in your browser
+* Start `ligthningd` with `ln-plugin-js` together, for example: `lightningd --conf=YOUR_CONFIG --plugin=./plugin.js`
 * Connect or Disconnect with a peer node 
 * Refresh the page to see new entries from mongodb
 
