@@ -1,10 +1,10 @@
 {
-  "name": "ln-plugin",
-  "version": "1.0.0",
+  "name": "ln-plugin-js",
+  "version": "0.0.1",
   "description": "Lightning Network demo plugin",
-  "main": "ln.js",
+  "main": "server.js",
   "scripts": {
-    "start": "babel-node --inspect-brk=9229 ./bin/www --presets es2015",
+    "start": "nodemon --exec babel-node ./bin/www",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [
@@ -18,7 +18,6 @@
   "author": "Harris Brakmic",
   "license": "MIT",
   "dependencies": {
-    "@lasso/marko-taglib": "^1.0.15",
     "axios": "^0.18.0",
     "body-parser": "^1.18.3",
     "boom": "^7.3.0",
@@ -28,7 +27,6 @@
     "mongoose": "^5.4.18",
     "morgan": "^1.9.1",
     "normalize-port": "^1.0.0",
-    "pug": "^2.0.3",
     "rotating-file-stream": "^1.4.0",
     "split": "^1.0.1",
     "winston": "^3.2.1"

@@ -19,7 +19,6 @@ const init = (config) => {
       try {
         console.log('Received data from LN: ' + JSON.stringify(req.body));
         const json = req.body;
-        console.log('object parsed to : ' + JSON.stringify(json));
         let status = undefined;
 
         if (json.method == 'connect') {
