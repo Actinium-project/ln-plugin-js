@@ -22,9 +22,9 @@ These are defined in the [config.json](https://github.com/Actinium-project/ln-pl
 
 More info on events and other options can be found [here](https://lightning.readthedocs.io/PLUGINS.html#a-day-in-the-life-of-a-plugin).
 
-This plugin can be expanded to do more than only waiting for events. For example, it could define methods to be registered in the `lightningd` daemon.
+This plugin can be expanded to do more than only waiting for events. 
 
-##### c-lightning
+For example, it could define methods to be registered in the `lightningd` daemon.
 
 ##### LICENSE
 
