@@ -1,0 +1,58 @@
+{
+  "name": "ln-plugin",
+  "version": "1.0.0",
+  "description": "Lightning Network demo plugin",
+  "main": "ln.js",
+  "scripts": {
+    "start": "babel-node --inspect-brk=9229 ./bin/www --presets es2015",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "lightning",
+    "network",
+    "actinium",
+    "bitcoin",
+    "cryptocurrency",
+    "crypto"
+  ],
+  "author": "Harris Brakmic",
+  "license": "MIT",
+  "dependencies": {
+    "@lasso/marko-taglib": "^1.0.15",
+    "axios": "^0.18.0",
+    "body-parser": "^1.18.3",
+    "boom": "^7.3.0",
+    "debug": "^4.1.1",
+    "express": "^4.16.4",
+    "express-boom": "^3.0.0",
+    "mongoose": "^5.4.18",
+    "morgan": "^1.9.1",
+    "normalize-port": "^1.0.0",
+    "pug": "^2.0.3",
+    "rotating-file-stream": "^1.4.0",
+    "split": "^1.0.1",
+    "winston": "^3.2.1"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.2.3",
+    "@babel/core": "^7.3.4",
+    "@babel/node": "^7.2.2",
+    "@babel/preset-env": "^7.3.4",
+    "@types/lodash": "^4.14.122",
+    "babel-cli": "^6.26.0",
+    "babel-preset-env": "^1.7.0",
+    "nodemon": "^1.18.10"
+  },
+  "babel": {
+    "presets": [
+      [
+        "env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  }
+}

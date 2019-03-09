@@ -1,0 +1,72 @@
+<!doctype>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8"/>
+    <title>Dashboard</title>
+    <link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/stylesheets/bootstrap/css/bootstrap-theme.min.css">
+    <script src="/scripts/jquery/jquery-3.3.1.min.js"></script>
+    <script src="/stylesheets/bootstrap/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="/stylesheets/style.css">
+    <script src="/scripts/ractive/ractive.js"></script>
+    <style>
+		body {
+			background-color:#eee;
+			min-height:100%;
+			font-family:Voltaire;
+		}
+	</style>
+  </head>
+  <body>
+    <div id="target" class="container"></div>
+
+	<script id='template' type='text/ractive'>
+		<h1>Lightning Log</h1>
+		
+		<datatable rows="{{rows}}" fields="['event','id','type','address','port']" headers="['Event','Node ID', 'Type', 'Address', 'Port']" selected="{{~/selectedBis}}" navigation="true" multiselect="false" />
+	
+	</script>
+
+	<script>
+		Ractive.components['datatable'] = Ractive.extend({
+			template: `<table class="table table-striped table-hover table-condensed">
+				{{#if ~/headers}}
+					<thead>
+						<tr>
+							{{#each ~/headers}}
+								<th>{{.}}</th>
+							{{/each}}
+						</tr>
+					</thead>
+				{{/if}}
+				<tbody>
+					{{#each rows as row}}
+						<tr class-info="this == ~/selected" on-click="@.link(@keypath, 'selected')">
+						{{#each ~/fields as f}}
+							<td>{{row[f]}}</td>
+						{{/each}}
+						</tr>
+					{{/each}}
+				</tbody>
+			</table>
+			<p>Selected node: <code>{{JSON.stringify(~/selected)}}</code></p>
+			`
+		});
+		
+		var ractive = new Ractive({
+			target: '#target',
+			template: '#template',
+			data: {
+					rows: []
+        },
+				on: {
+							complete: function() {
+								$.get('http://localhost:3000/api/status', function(data) {
+											ractive.set('rows', data);
+							});
+				}
+			},
+		});
+	</script>
+
+</html>

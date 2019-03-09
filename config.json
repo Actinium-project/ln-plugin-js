@@ -1,0 +1,11 @@
+{
+    "useWebServer": true,
+    "useLogger": true,
+    "serverPort": 3000,
+    "serverName": "localhost",
+    "serverProtocol": "http",
+    "subscriptions": [
+        "connect",
+        "disconnect"
+    ]
+}
