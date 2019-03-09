@@ -14,6 +14,8 @@
 * Connect or Disconnect with a peer node 
 * Refresh the page to see new entries from mongodb
 
+![lightning-log](https://raw.githubusercontent.com/Actinium-project/ACM-Designs/master/random/ln-plugin-web.png)
+
 ##### Event Handling
 
 By default the plugin only subscribes to `connect` and `disconnect` events from [c-lightning](https://github.com/ElementsProject/lightning).
