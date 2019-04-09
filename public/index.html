@@ -62,9 +62,9 @@
 				on: {
 							complete: function() {
 								$.get('http://localhost:3000/api/status', function(data) {
-											ractive.set('rows', data);
-							});
-				}
+									ractive.set('rows', data);
+								});
+							}
 			},
 		});
 	</script>
