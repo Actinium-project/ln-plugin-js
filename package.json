@@ -18,7 +18,7 @@
   "author": "Harris Brakmic",
   "license": "MIT",
   "dependencies": {
-    "axios": "^0.19.0",
+    "axios": "^0.21.1",
     "body-parser": "^1.19.0",
     "boom": "^7.3.0",
     "debug": "^4.1.1",
